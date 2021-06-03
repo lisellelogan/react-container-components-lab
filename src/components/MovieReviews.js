@@ -21,4 +21,8 @@ const MovieReviews = ({ reviews }) => {
     )
 }
 
+MovieReviews.defaultProps = {
+    reviews: []
+}
+
 export default MovieReviews

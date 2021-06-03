@@ -13,7 +13,7 @@ export default class LatestMovieReviewsContainer extends Component {
         reviews: []
     }
 
-    componentDidMount = () => {
+    componentDidMount(){
         fetch(URL)
         .then(resp => resp.json())
         .then(data => {
