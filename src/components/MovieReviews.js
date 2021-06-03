@@ -8,7 +8,7 @@ const MovieReviews = ({ reviews }) => {
 
     const renderReviews = () => {
         return reviews.map((review, index) => {    
-            return <li key={index}>{review.display_title}: {review.summary_short}</li>
+            return <li className="review" key={index}>{review.display_title}: {review.summary_short}</li>
         })
     }
     
@@ -19,6 +19,10 @@ const MovieReviews = ({ reviews }) => {
             </ul>
         </div>
     )
+}
+
+MovieReviews.defaultProps = {
+    reviews: []
 }
 
 export default MovieReviews

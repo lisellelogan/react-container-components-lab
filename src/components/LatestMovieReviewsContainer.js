@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'isomorphic-fetch';
-import MovieReviews from './MovieReviews';
+import MovieReviews from './MovieReviews'
 
 const NYT_API_KEY = 'dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ';
 const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/all.json?'
@@ -13,7 +13,7 @@ export default class LatestMovieReviewsContainer extends Component {
         reviews: []
     }
 
-    componentDidMount = () => {
+    componentDidMount(){
         fetch(URL)
         .then(resp => resp.json())
         .then(data => {
@@ -28,6 +28,6 @@ export default class LatestMovieReviewsContainer extends Component {
             <div className="latest-movie-reviews">
                 <MovieReviews reviews={this.state.reviews} />
             </div>
-        );
+        )
     }
 }
